@@ -1,0 +1,12 @@
+#基于linux环境，Python-pip推荐使用Python官方源，国内清华豆瓣所提供库不全
+
+debug环境部署
+1.git clone 项目
+2.进入文档目录:cd flaskblog
+3.pip install -r requestment.txt -i https://pypi.python.org/simple
+4.安装mysql：（ubuntu）apt-get install mysql-server
+5.进入mysql并创建一个数据库：create flaskblog
+6.使用框架自带工具创建创建项目需要的表
+  1).修改managy.py将默认的用户名和密码修改为各自主机的mysql账户和密码
+  2).Python managy.py createdb
+7.python run.py
