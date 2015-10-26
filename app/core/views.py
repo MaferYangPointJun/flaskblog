@@ -54,3 +54,7 @@ def logout():
 @bp.route('/about')
 def about():
     return render_template('about.html', title='about', user=current_user)
+
+@bp.route('/indexs')
+def indexs():
+    return render_template('blogpage/index.html')
