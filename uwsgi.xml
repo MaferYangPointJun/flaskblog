@@ -1,0 +1,9 @@
+<uwsgi>
+     <pythonpath>/var/www/flaskblog</pythonpath>
+     <module>wsgi_gunicorn</module>
+     <callable>app</callable>
+     <socket>/tmp/uwsgi.sock</socket>    
+     <master/>
+     <processes>4</processes>               
+     <memory-report/>
+</uwsgi>
