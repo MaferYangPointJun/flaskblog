@@ -40,6 +40,8 @@ def register_blueprint(app):
     app.register_blueprint(bp)
     from app.core.api import api
     app.register_blueprint(api, url_prefix='/api')
+    from app.core.IndexView import index
+    app.register_blueprint(index, url_prefix='/index')
 
 
 # Initialize flask-login
