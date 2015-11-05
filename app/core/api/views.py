@@ -3,6 +3,9 @@ from app.core.models import Post, Category
 from .import api
 from sqlalchemy import desc
 
+@api.route('/')
+def index():
+    return "this is index"
 
 @api.route('/posts')
 def get_posts():

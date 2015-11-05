@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Domino</title>
+    <script src="/static/js/Common.js"></script>
+    <link href="/static/css/bootstrap-extend.css" rel="stylesheet" />
+    <link href="/static/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body class="landing">
+    <form id="form1">
+        <div class="launch-nav navbar navbar-default scroll-fade">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="/" class="pixelapse-60-logo">
+                        <img alt="PIXELAPSE"
+                            height="60" src="static/Image/logo-white.png"
+                            width="120" /></a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-general"><a href="javascript:void(0)">板块</a></li>
+                    <li class="nav-general"><a href="javascript:void(0)">热门</a></li>
+                    <li class="nav-general"><a href="javascript:void(0)">板内通知</a></li>
+                    <li class="nav-general"><a href="javascript:void(0)">合作链接</a></li>
+                    <li class="signin">
+                        <a href="javascript:void(0)" onclick="ShowView()" class="pixelapse-60-logo">
+                            <img alt="Login" src="https://d340syr2dan8gj.cloudfront.net/assets/landing/avatar5-8839dd576eb9dda4192ede724e39ad13.png" />
+                        </a>
+                        <input type="hidden" id="hidUserInfo" value="YYJ" />
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div
+            class="background-bluewood landing-cover landing-cover-header landing-cover-index background-noise">
+            <div class="bg-overlay full-coverage"></div>
+            <div class="row" id="textInfo">
+                <div class="col-md-10 col-md-offset-1">
+                    <h1>Python world,What we create for</h1>
+                    <!--<p>这是一个创造的世界，你可以分享你的知识，也可以提出你的不解。</p>-->
+                </div>
+            </div>
+        </div>
+        <div class="background-bluewood landing-cover-bkg">
+        </div>
+        <div id="UserLogin" class="landing-cover-drop none">
+            <div class="col-md-12 active">
+                <p class="text-white">欢迎登陆</p>
+            </div>
+            <div class="col-md-12">
+                <form class="login-form" action="/login" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="用户名" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="密码" />
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="rememberUser" /><label class="text-white" for="rememberUser">记住此次登陆？</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="登陆" class="landing-btn landing-btn-large landing-btn-clear" />
+                    </div>
+                    <div class="from-group">
+                        <a class="text-left">忘记密码</a><a class="text-left">/</a><a href="registered" class="text-left">注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="UserDrop" class="landing-cover-drop none">
+            <div class="col-md-12 active">
+                <p class="text-white">你好：<label id="UserName"></label></p>
+                <p class="text-white">您的积分是:<label id="UserLevel"></label></p>
+                <a id="to" href="javascirpt:void()">前往管理页面</a>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </form>
+</body>
